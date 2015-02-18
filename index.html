@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Boompx jQuery Hero Slider Plugin</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <meta name="description" content="Boompx jQuery Hero Slider Plugin">
+        <link rel="shortcut icon" href="favicon.png">
+
+        <!-- [ Optional ] -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="dist/css/custom.css">
+        
+        <!-- [ REQUIRED ] -->
+        <link rel="stylesheet" href="dist/css/bpHS.min.css">
+    </head>
+    <body>
+    <!--[if lte IE 8]>
+      <div id="browser-status">	
+        Dear Web User, your browser is out of date! <a href="http://browsehappy.com/" target="_blank">
+        Please Upgrade Your Browser
+      </a>
+      </div>
+    <![endif]--> 
+    
+    <a href="https://github.com/boompx/bpHS" class="fork-btn">
+      <img  src="dist/images/misc/fork-btn.png" alt="https://github.com/boompx/bpHS">
+    </a>
+    
+    <div class="jumbotron text-center bg-transparent">
+      <div class="container">
+        <h1 class="font-heading">jQuery Hero Slider Plugin</h1>
+      </div>
+    </div>
+    
+    <div class="container">
+    
+        <div class="bp-hs" id="demo-default">
+          <div class="bp-hs_inner">
+            <div class="bp-hs_inner__item" data-transform="scale">
+              <img src="dist/images/demo/01.jpg" alt="Boompx Hero Slider 01"/>
+            </div>
+            <div class="bp-hs_inner__item" data-transform="rotate" data-origin="top-left">
+              <img src="dist/images/demo/02.jpg" alt="Boompx Hero Slider 02"/>
+            </div>
+            <div class="bp-hs_inner__item" data-transform="rotate"  data-origin="bottom-left">
+              <img src="dist/images/demo/03.jpg" alt="Boompx Hero Slider 03"/>
+            </div>
+            <div class="bp-hs_inner__item">
+              <img src="dist/images/demo/04.jpg" alt="Boompx Hero Slider 04"/>
+            </div>
+          </div>
+        </div>
+        
+        <ul class="list-inline clearfix m-t30">
+            <li class="pull-left">
+              <a class="twitter-follow-button"
+                href="https://twitter.com/boom_px"
+                data-show-count="true"
+                data-lang="en">
+              Follow @twitterapi
+              </a>
+              <script>window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));</script>
+            </li>
+            <li class="pull-left">
+              <a class="github-button" href="https://github.com/boompx" data-count-href="/boompx/followers" data-count-api="/users/boompx#followers">Follow @boompx</a>
+            </li>
+            <li class="pull-left">
+              <a class="github-button" href="https://github.com/boompx/bpHS" data-icon="octicon-star" data-count-href="/boompx/bpHS/stargazers" data-count-api="/repos/boompx/bpHS#stargazers_count">Star</a>
+            </li>
+            <li class="pull-left">
+              <a class="github-button" href="https://github.com/boompx/bpHS" data-icon="octicon-git-branch" data-count-href="/boompx/bpHS/network" data-count-api="/repos/boompx/bpHS#forks_count">Fork</a>
+            </li>
+            <li class="pull-left">
+              <a class="github-button" href="https://github.com/boompx/bpHS/archive/master.zip" data-icon="octicon-cloud-download">Download</a>
+            </li>
+            <li class="pull-left">
+              <a class="github-button" href="https://github.com/boompx/bpHS/issues" data-icon="octicon-issue-opened" data-count-api="/repos/boompx/bpHS#open_issues_count">Issue</a>
+            </li>
+            <li class="pull-left">
+            <div class="fb-like" data-href="https://www.facebook.com/pages/Boompx/380876822068214?ref=aymt_homepage_panel" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
+            </li>
+        </ul>
+        <hr />
+        
+        <h2 class="font-heading">Getting Started</h2>
+        <pre class="prettyprint prettyprint-std">git clone https://github.com/boompx/bpHS.git</pre>
+      
+        <h2 class="font-heading">Markup</h2>
+        <pre class="prettyprint prettyprint-std">&lt;div class="bp-hs"&gt;
+  &lt;div class="bp-hs_inner"&gt;
+    &lt;div class="bp-hs_inner__item"&gt;
+      &lt;img src="..." alt="..."/&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+        <h2 class="font-heading">Usage</h2>
+        <p class="text-muted">
+        <strong>bpHS</strong> require the use of an <code>id</code> on the outermost container (<code>.bp-hs</code>) for slider controls to function properly.
+        </p>
+        <p>Fire <strong>bpHS</strong></p>
+        <pre class="prettyprint prettyprint-std">$('.bp-hs').bpHS();</pre>
+        
+        <h2 class="font-heading">Options</h2>
+        <p>The default effect/transition for <code>bp-hs_inner__item</code> is opacity. You can control the animation for each item via data attributes <code>data-*</code>.</p>
+        
+        <table class="table table-bordered table-striped">
+          <tr>
+          <th>Data attribute</th>
+          <th>Description</th>
+          </tr>
+          <tr>
+            <td><code>data-transform="scale"</code></td>
+            <td>Is used to scale elements. <span class="text-muted">Add an addtional effect by using <code>data-origin="top-(right | left)"</code> or  <code>data-origin="bottom-(right | left)"</code></span></td>
+          </tr>
+          <tr>
+            <td><code>data-transform="rotate"</code></td>
+            <td>Is used to rotate elements from corners based on <code>data-origin="top-(right | left)"</code> or <code>data-origin="bottom-(right | left)"</code> <small class="text-danger">(required*)</small></td>
+          </tr>
+        </table>
+        
+        <h2 class="font-heading">Methods</h2>
+        <p class="text-muted">Initializes the <strong>bpHS</strong> with an optional options</p>
+        
+        <table class="table table-bordered table-striped">
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><code>activate</code></td>
+            <td class="text-muted">Number</td>
+            <td class="text-muted">0</td>
+            <td>
+            This event fires on <code>bp-hs_inner__item</code> and add <code>is-active</code> class to make visible/default.
+            </td>
+          </tr>
+          <tr>
+            <td><code>touchSwipe</code></td>
+            <td class="text-muted">Boolean</td>
+            <td class="text-muted">true</td>
+            <td>
+            Allows you to drag slider items (right | left) on desktop and swipe on handheld devices. 
+            This option required <a href="https://github.com/mattbryson/TouchSwipe-Jquery-Plugin">TouchSwipe Jquery Plugin</a>
+            </td>
+          </tr>
+          <tr>
+            <td><code>nextText</code></td>
+            <td class="text-muted">String</td>
+            <td class="text-muted">null</td>
+            <td>
+            The text to display for the next control button
+            </td>
+          </tr>
+          <tr>
+            <td><code>prevText</code></td>
+            <td class="text-muted">String</td>
+            <td class="text-muted">null</td>
+            <td>
+            The text to display for the previous control button
+            </td>
+          </tr>
+          <tr>
+            <td><code>showControls</code></td>
+            <td class="text-muted">Boolean</td>
+            <td class="text-muted">true</td>
+            <td>
+            Show or hide all controls (next, prev and bullets)
+            </td>
+          </tr>
+          <tr>
+            <td><code>showButtons</code></td>
+            <td class="text-muted">Boolean</td>
+            <td class="text-muted">true</td>
+            <td>
+            Show or hide next, prev only
+            </td>
+          </tr>
+          <tr>
+            <td><code>showBullets</code></td>
+            <td class="text-muted">Boolean</td>
+            <td class="text-muted">true</td>
+            <td>
+            Show or hide bullets only
+            </td>
+          </tr>
+          <tr>
+            <td><code>arrowKeys</code></td>
+            <td class="text-muted">Boolean</td>
+            <td class="text-muted">false</td>
+            <td>
+            Allows to navigate slider items on keypress arrow 
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-xs btn-default" disabled><i class="fa fa-long-arrow-left"></i></button>
+              <button type="button" class="btn btn-xs btn-default" disabled><i class="fa fa-long-arrow-right"></i></button>
+            </div>
+            </td>
+          </tr>
+          <tr>
+            <td><code>autoPlay</code></td>
+            <td class="text-muted">Boolean</td>
+            <td class="text-muted">false</td>
+            <td>
+            Automatically cycling an item <small class="text-muted">(paused on hover)</small>. If false, slider will not automatically cycle.
+            </td>
+          </tr>
+          <tr>
+            <td><code>duration</code></td>
+            <td class="text-muted">Number</td>
+            <td class="text-muted">5000</td>
+            <td>
+            The amount of time to delay between automatically cycling an item.
+            </td>
+          </tr>
+        </table>
+        
+        <div class="text-center">
+        <img class="img-responsive" src="dist/images/misc/panda.jpg" alt="Made with love by Boompx"/>
+        <p class="text-muted">more options are coming soon...</p>
+        
+        <hr />
+        Designed and built with all the love by <a href="boompx.com">Boompx</a>
+        <br />
+        Code licensed under <a href="https://github.com/boompx/bpHS/blob/master/LICENSE">MIT</a>
+        ~ Currently v0.1.0
+        </div>
+    </div>
+    
+    <!-- [ REQUIRED ] -->
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="dist/js/vendors/jquery.touchSwipe.min.js"></script> <!-- optional (required for touchSwipe option) -->
+    <script src="dist/js/bpHS.min.js"></script>
+    
+    <!-- [ Demo Script ] -->
+    <script src="dist/js/custom.js"></script>
+    
+    <!-- [ Optional ] -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=393230720806634&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    </body>
+</html>

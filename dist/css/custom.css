@@ -1,0 +1,66 @@
+body { 
+  font-family: 'Roboto', sans-serif; 
+  padding-bottom: 60px;
+  }
+.font-heading {
+  font-family: 'Playfair Display', serif;
+}
+
+.fork-btn {
+  position: fixed; 
+  top: 0; 
+  right: 0; 
+  border: 0;
+}
+
+.m-t30 { margin-top: 30px; }
+.m-0   { margin: 0; }
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.doc-container {
+  font-family: $font-family-roboto;
+  .has-modal {
+    .modal-dialog {
+      &.modal-lg {
+        width: 1170px;
+        margin: 50px auto;
+      }
+    }
+  }
+  .table {
+    background-color: #fff;
+  }
+  .color-demo {
+    width: 16px;
+    min-width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    display: inline-block;
+    position: relative;
+  }
+}
+
+.color-swatch {
+  height: 150px;
+}
+
+pre.prettyprint.prettyprint-std {
+  padding: 15px;
+  border: 1px solid #eee;
+  font-family: consolas;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  border-radius: 0;
+}
+
+pre.prettyprint.prettyprint-std span.com { color: #919d9f; }
+pre.prettyprint.prettyprint-std span.pln { color: #395063; }
+pre.prettyprint.prettyprint-std span.tag { color: #6a93d0; }
+pre.prettyprint.prettyprint-std span.atv { color: #05ad97; }
+pre.prettyprint.prettyprint-std span.pun, 
+pre.prettyprint.prettyprint-std span.opn, 
+pre.prettyprint.prettyprint-std span.clo { color: #B9947B; }
+pre.prettyprint.prettyprint-std span.atn { color: #a95ebb; }
